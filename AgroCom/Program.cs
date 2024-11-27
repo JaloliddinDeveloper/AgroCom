@@ -1,3 +1,7 @@
+using AgroCom.Brokers.Storages;
+using AgroCom.Services.Ogits;
+using AgroCom.Services.Products;
+
 public class Program
 {
     private static void Main(string[] args)
@@ -5,6 +9,12 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllers();
+
+        builder.Services.AddTransient<IStorageBroker, StorageBroker>();
+
+        builder.Services.AddTransient<IProductService,ProductService>();
+
+        builder.Services.AddTransient<IOgitService,OgitService>();
 
         builder.Services.AddEndpointsApiExplorer();
 
