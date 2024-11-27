@@ -2,11 +2,12 @@
 
 namespace AgroCom.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        [HttpGet]
+        public ActionResult<string> Get() =>
+            Ok("Hello,Mario.");
     }
 }
