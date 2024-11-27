@@ -21,5 +21,17 @@ namespace AgroCom.Brokers.Storages
 
         public async ValueTask<Product> DeleteProductAsync(Product product) =>
             await DeleteAsync(product);
+
+        public ValueTask<IQueryable<Product>> SelectAllProductsGerbesetlarAsync()
+        {
+            var query = Products.Where(tur => tur.ProductType == ProductType.Gerbesetlar);
+            return ValueTask.FromResult(query);
+        }  
+
+        public ValueTask<IQueryable<Product>> SelectAllProductsFungisetlarAsync()
+        {
+            var query = Products.Where(tur => tur.ProductType == ProductType.Fungisetlar);
+            return ValueTask.FromResult(query);
+        }
     }
 }

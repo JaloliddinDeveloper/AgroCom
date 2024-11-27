@@ -9,5 +9,8 @@ namespace AgroCom.Brokers.Storages
         ValueTask<Product> SelectProductByIdAsync(int productId);
         ValueTask<Product> UpdateProductAsync(Product product);
         ValueTask<Product> DeleteProductAsync(Product product);
+
+        ValueTask<IQueryable<Product>> SelectAllProductsGerbesetlarAsync();
+        ValueTask<IQueryable<Product>> SelectAllProductsFungisetlarAsync();
     }
 }
