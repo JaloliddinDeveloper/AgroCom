@@ -1,4 +1,8 @@
-﻿using AgroCom.Brokers.Storages;
+﻿//--------------------------------------------------
+// Copyright (c) Coalition Of Good-Hearted Engineers
+// Free To Use To Find Comfort And Peace
+//--------------------------------------------------
+using AgroCom.Brokers.Storages;
 using AgroCom.Models.Foundations.Ogits;
 
 namespace AgroCom.Services.Ogits
@@ -10,7 +14,7 @@ namespace AgroCom.Services.Ogits
         public OgitService(IStorageBroker storageBroker)=>
             this.storageBroker = storageBroker;
         
-        public async ValueTask<Ogit> RemoveProductByIdAsync(int ogitId)
+        public async ValueTask<Ogit> RemoveOgitByIdAsync(int ogitId)
         {
             Ogit maybeOgit=
                 await this.storageBroker.SelectOgitByIdAsync(ogitId);

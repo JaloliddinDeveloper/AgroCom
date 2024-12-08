@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgroCom.Migrations
 {
     [DbContext(typeof(StorageBroker))]
-    [Migration("20241127181717_CreateAllTablesInitializeAddPicture")]
-    partial class CreateAllTablesInitializeAddPicture
+    [Migration("20241208062954_CreateAllTablesInitialize")]
+    partial class CreateAllTablesInitialize
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

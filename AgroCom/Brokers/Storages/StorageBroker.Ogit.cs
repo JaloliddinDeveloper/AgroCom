@@ -21,5 +21,17 @@ namespace AgroCom.Brokers.Storages
 
         public async ValueTask<Ogit> DeleteOgitAsync(Ogit ogit) =>
             await DeleteAsync(ogit);
+
+        public async ValueTask<IQueryable<Ogit>> SelectAllOgitsSuyuqAsync()
+        {
+            var query = Ogits.Where(tur => tur.OgitType == OgitType.Suyuq);
+            return await ValueTask.FromResult(query);
+        }
+
+        public async ValueTask<IQueryable<Ogit>> SelectAllOgitsQuyuqAsync()
+        {
+            var query = Ogits.Where(tur => tur.OgitType == OgitType.Kukun);
+            return await ValueTask.FromResult(query);
+        }
     }
 }
