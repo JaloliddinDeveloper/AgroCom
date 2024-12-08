@@ -1,3 +1,7 @@
+//--------------------------------------------------
+// Copyright (c) Coalition Of Good-Hearted Engineers
+// Free To Use To Find Comfort And Peace
+//--------------------------------------------------
 using AgroCom.Brokers.Storages;
 using AgroCom.Services.Ogits;
 using AgroCom.Services.Products;

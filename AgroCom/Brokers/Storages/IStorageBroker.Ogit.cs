@@ -9,5 +9,8 @@ namespace AgroCom.Brokers.Storages
         ValueTask<Ogit> SelectOgitByIdAsync(int ogitId);
         ValueTask<Ogit> UpdateOgitAsync(Ogit ogit);
         ValueTask<Ogit> DeleteOgitAsync(Ogit ogit);
+
+        ValueTask<IQueryable<Ogit>> SelectAllOgitsSuyuqAsync();
+        ValueTask<IQueryable<Ogit>> SelectAllOgitsQuyuqAsync();
     }
 }

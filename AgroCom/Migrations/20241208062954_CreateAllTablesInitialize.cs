@@ -18,7 +18,8 @@ namespace AgroCom.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OgitType = table.Column<int>(type: "int", nullable: false)
+                    OgitType = table.Column<int>(type: "int", nullable: false),
+                    OgitPicture = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,7 +34,8 @@ namespace AgroCom.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProductType = table.Column<int>(type: "int", nullable: false)
+                    ProductType = table.Column<int>(type: "int", nullable: false),
+                    ProductPicture = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
